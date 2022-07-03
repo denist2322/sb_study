@@ -2836,3 +2836,21 @@ Unconditional classes:
 2022-07-03 16:10:15 [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
 2022-07-03 16:10:15 [INFO ] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
 2022-07-03 16:10:15 [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2022-07-03 16:11:25 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-03 16:11:25 [INFO ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-03 16:11:25 [INFO ] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2022-07-03 16:11:25 [WARN ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [114] milliseconds.
+2022-07-03 16:40:42 [DEBUG] o.s.boot.devtools.restart.Restarter - Application restart required due to the following changes: [C:\work\sts-4.15.1.RELEASE-workspace\study2\target\classes [C:\work\sts-4.15.1.RELEASE-workspace\study2\target\classes\application.yml (MODIFY)]]
+2022-07-03 16:40:42 [DEBUG] o.s.boot.devtools.restart.Restarter - Restarting application
+2022-07-03 16:40:42 [DEBUG] o.s.boot.devtools.restart.Restarter - Stopping application
+2022-07-03 16:40:42 [DEBUG] o.s.b.a.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+2022-07-03 16:40:42 [DEBUG] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@67cf6602, started on Sun Jul 03 16:10:14 KST 2022
+2022-07-03 16:40:42 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2022-07-03 16:40:42 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerGracefulShutdown' completed its stop procedure
+2022-07-03 16:40:42 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483646
+2022-07-03 16:40:42 [DEBUG] o.s.c.s.DefaultLifecycleProcessor - Bean 'webServerStartStop' completed its stop procedure
+2022-07-03 16:40:42 [DEBUG] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2022-07-03 16:40:42 [DEBUG] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2022-07-03 16:40:42 [DEBUG] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-03 16:40:42 [DEBUG] o.s.b.d.r.c.RestartClassLoader - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@409c4a18
+2022-07-03 16:40:42 [DEBUG] o.s.boot.devtools.restart.Restarter - Starting application com.example.demo.Study2Application with URLs [file:/C:/work/sts-4.15.1.RELEASE-workspace/study2/target/classes/]

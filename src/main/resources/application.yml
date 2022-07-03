@@ -11,4 +11,8 @@ spring:
     username: sm
     password: 1234  
 mybatis:
-  type-aliases-package: com.example.demo.vo  
+  type-aliases-package: com.example.demo.vo
+custom:
+  logging:
+    dir: log
+    level: debug
