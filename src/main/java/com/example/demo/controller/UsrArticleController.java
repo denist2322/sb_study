@@ -106,7 +106,7 @@ public class UsrArticleController {
 	@ResponseBody
 	public ResultData doAdd(HttpSession httpSession, String title, String body){	
 		boolean isLogined = false;
-		//loginedMemberId가 이름은 같으나, 여기는 변수, httpSession에는 key이다.	int loginedMemberId = 0;
+		//loginedMemberId가 이름은 같으나, 여기는 변수, httpSession에는 key이다.
 		int loginedMemberId = 0;
 		
 		if(httpSession.getAttribute("loginedMemberId")!= null) {
