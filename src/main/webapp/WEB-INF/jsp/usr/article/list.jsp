@@ -7,8 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>안녕하세요</h1>
-
+  <h1>게시물 리스트 페이지</h1>
+  <header>
+    <a href="/">로고</a>
+    
+    <ul>
+      <li><a href="/">홈</a></li>
+      <li><a href="/usr/article/list">리스트</a></li>
+    </ul>   
+  </header>
   <hr />
   <table>
     <thead>
