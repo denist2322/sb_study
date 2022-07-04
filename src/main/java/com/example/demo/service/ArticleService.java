@@ -15,12 +15,12 @@ public class ArticleService {
 		this.articleRepository = articleRepository;
 	}
 
-	public List<Article> getArticles() {
+	public List<Article> getForPrintArticles() {
 		return articleRepository.getArticles();
 	}
 
-	public Article getArticle(int id) {
-		return articleRepository.getArticle(id);
+	public Article getForPrintArticle(int id) {
+		return articleRepository.getForPrintArticle(id);
 	}
 
 	public void doDelete(int id) {

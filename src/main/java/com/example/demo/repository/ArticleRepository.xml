@@ -2,11 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.example.demo.repository.ArticleRepository">
-
-	
-	<select id="getArticle" resultType="Article">
-		SELECT * FROM article WHERE id = #{id};
-	</select>
 	
 	<delete id="doDelete">
 		DELETE FROM article WHERE id = #{id};

@@ -24,7 +24,7 @@ public class UsrArticleController {
 	
 	@RequestMapping("/usr/article/list")
 	public String showList(Model model){
-		List<Article> articles = articleService.getArticles();
+		List<Article> articles = articleService.getForPrintArticles();
 		
 		model.addAttribute("articles", articles);
 		
@@ -33,7 +33,7 @@ public class UsrArticleController {
 	
 	@RequestMapping("/usr/article/detail")
 	public String showDetail(Model model, int id){
-		Article article = articleService.getArticle(id);
+		Article article = articleService.getForPrintArticle(id);
 		
 		model.addAttribute("article", article);
 		
@@ -43,7 +43,7 @@ public class UsrArticleController {
 	@RequestMapping("/usr/article/getArticle")
 	@ResponseBody
 	public ResultData getArticle(int id){
-		Article article = articleService.getArticle(id);
+		Article article = articleService.getForPrintArticle(id);
 		if(article == null) {
 			return  ResultData.from("F-1", "게시물이 없어요;;");
 		}
@@ -67,7 +67,7 @@ public class UsrArticleController {
 			return ResultData.from("F-A", "로그인 후 이용해주세여~");
 		}
 		
-		Article article = articleService.getArticle(id);
+		Article article = articleService.getForPrintArticle(id);
 		
 		if(article == null) {
 			return  ResultData.from("F-1", "게시물이 없어요;;");
@@ -98,7 +98,7 @@ public class UsrArticleController {
 			return ResultData.from("F-A", "로그인 후 이용해주세여~");
 		}
 		
-		Article article = articleService.getArticle(id);
+		Article article = articleService.getForPrintArticle(id);
 		
 		if(article == null) {
 			return  ResultData.from("F-1", "게시물이 없어요;;");
@@ -109,7 +109,7 @@ public class UsrArticleController {
 		}
 				
 		articleService.doModify(id, title, body);
-		article = articleService.getArticle(id);
+		article = articleService.getForPrintArticle(id);
 		
 		return ResultData.from("S-1", Ut.f("%d 번 게시물 수정함", id),article);
 	}
