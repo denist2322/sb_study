@@ -2,59 +2,58 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="pageTitle" value="게시물 상세내용" />
 <%@ include file="../common/head.jspf"%>
-  
-<section class="mt-5" >
-  <div class="container mx-auto px-3">  
+
+<section class="mt-5">
+  <div class="container mx-auto px-3">
     <div class="table-box-type-1">
       <table>
         <colgroup>
           <col width="200" />
         </colgroup>
         <tbody>
-            <tr>
+          <tr>
             <th>번호</th>
-              <td>${article.id}</td>
-            </tr>
-            
-            <tr>  
+            <td>${article.id}</td>
+          </tr>
+
+          <tr>
             <th>작성날짜</th>
-              <td>${article.regDate.substring(2, 16)}</td>
-            </tr>
-            
-            <tr>
-            <th>수정날짜</th>  
-              <td>${article.updateDate.substring(2, 16)}</td>
-            </tr>
-            
-            <tr>
-            <th>작성자</th>  
-              <td>${article.extra__writerName}</td>
-           </tr>
-             
-            <tr> 
+            <td>${article.regDate.substring(2, 16)}</td>
+          </tr>
+
+          <tr>
+            <th>수정날짜</th>
+            <td>${article.updateDate.substring(2, 16)}</td>
+          </tr>
+
+          <tr>
+            <th>작성자</th>
+            <td>${article.extra__writerName}</td>
+          </tr>
+
+          <tr>
             <th>제목</th>
-              <td>
-                ${article.id}
-              </td>
-            </tr>
-            
-            <tr> 
+            <td>${article.id}</td>
+          </tr>
+
+          <tr>
             <th>내용</th>
-              <td>
-                ${article.title}
-              </td>
-            </tr>
-            
+            <td>${article.title}</td>
+          </tr>
+
         </tbody>
-      </table>   
-    </div> 
-    
+      </table>
+    </div>
+
     <div class="btns">
       <button class="btn-text-link" type="button" onclick="history.back()">뒤로가기</button>
       <a class="btn-text-link" href="../article/doModify?id=${article.id}">게시물 수정</a>
-      <a class="btn-text-link" onclick="if(confirm('진짜 삭제할거얌?')==false) return false" href="../article/doDelete?id=${article.id}">게시물 삭제</a>
-    </div> 
+      <c:if test="${article.extra__actorCanDelete}">
+        <a class="btn-text-link" onclick="if(confirm('진짜 삭제할거얌?')==false) return false"
+          href="../article/doDelete?id=${article.id}">게시물 삭제</a>
+      </c:if>
+    </div>
   </div>
 </section>
-  
-  <%@ include file="../common/foot.jspf"%> 
+
+<%@ include file="../common/foot.jspf"%>

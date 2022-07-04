@@ -19,7 +19,7 @@ public class MemberService {
 		Member oldmember = getMemberByLoginId(loginId);
 		
 		if(oldmember != null) {
-			return ResultData.from("F-7", Ut.f("해당 로그인 아이디(%s)는 이미 사용중 입니다.", loginId));
+			return ResultData.from("F-7", Ut.f("해당 로그인 아이디(%s)는 이미 사용중 입니다.", "loginId", loginId));
 					
 		}
 		
@@ -37,10 +37,10 @@ public class MemberService {
 		Member member = memberRepository.getMemberById(id);
 		
 		if(member == null) {
-			return ResultData.from("F-8", "회원가입에 실패했습니다.", member);
+			return ResultData.from("F-8", "회원가입에 실패했습니다.", "member", member);
 		}
 		
-		return ResultData.from("S-1", "회원가입이 완료되었습니다.", member);
+		return ResultData.from("S-1", "회원가입이 완료되었습니다.", "member", member);
 	}
 
 	public Member getMemberByNameAndEmail(String name, String email) {
